@@ -31,6 +31,5 @@ jobs:
           PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
         run: |
           source .venv/bin/activate
-          poetry config repositories.test-pypi https://test.pypi.org/legacy/
-          poetry publish --repository=test-pypi --username=__token__ --password=$PYPI_TOKEN
+          poetry publish --username=__token__ --password=$PYPI_TOKEN
 
